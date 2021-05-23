@@ -70,13 +70,17 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="669.5,830" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+  <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="669.5,888" sap2010:WorkflowViewState.IdRef="Flowchart_3">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="configInit" Name="wfName" />
       <Variable x:TypeArguments="x:String" Name="parametersJson" />
       <Variable x:TypeArguments="x:Boolean" Name="pathExists" />
       <Variable x:TypeArguments="njl:JObject" Name="parameters" />
-      <Variable x:TypeArguments="x:String" Default="C:\Users\julio\Documents\UiPath\nybble wo template\config\init.json" Name="configFilePath" />
+      <Variable x:TypeArguments="x:String" Name="configFilePath">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="currentDirectory+Path.DirectorySeparatorChar+ &quot;config\init.json&quot;" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="baseUrl" />
       <Variable x:TypeArguments="x:String" Name="outputFile" />
       <Variable x:TypeArguments="x:String" Name="mailTo" />
@@ -86,6 +90,9 @@
       <Variable x:TypeArguments="sd:DataTable" Name="booksTableDt" />
       <Variable x:TypeArguments="sd:DataTable" Name="resultDataTable" />
       <Variable x:TypeArguments="x:String" Name="outdttext" />
+      <Variable x:TypeArguments="x:String" Name="currentDirectory" />
+      <Variable x:TypeArguments="x:Int32" Name="maxBooksLimit" />
+      <Variable x:TypeArguments="x:String" Name="outputFilePath" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -94,18 +101,18 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">635.51666666666665</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,94</av:PointCollection>
-        <x:Double x:Key="Height">794</x:Double>
+        <x:Double x:Key="Height">852</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,354</av:Point>
+          <av:Point x:Key="ShapeLocation">200,484</av:Point>
           <av:Size x:Key="ShapeSize">200,52</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,406 300,456</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,536 300,574</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Amazon_Search workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Amazon_Search.xaml">
@@ -125,9 +132,9 @@
         <FlowStep x:Name="__ReferenceID3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">200,456</av:Point>
+              <av:Point x:Key="ShapeLocation">200,574</av:Point>
               <av:Size x:Key="ShapeSize">200,52</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,508 300,558</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">300,626 300,648</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Amazon_ExtractData workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Amazon_ExtractData.xaml">
@@ -135,6 +142,9 @@
               <OutArgument x:TypeArguments="sd:DataTable" x:Key="_booksTableDt">
                 <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="booksTableDt" />
               </OutArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="_maxBooksLimit">
+                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="maxBooksLimit" />
+              </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -146,11 +156,12 @@
             <FlowStep x:Name="__ReferenceID4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200,558</av:Point>
+                  <av:Point x:Key="ShapeLocation">200,648</av:Point>
                   <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,700 300,800</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Amazon_GetBookDetails workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Amazon_GetBookDetails.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Amazon_GetBookDetails workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Amazon_GetBookDetails.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="sd:DataTable" x:Key="_booksDT">
                     <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="booksTableDt" />
@@ -162,6 +173,34 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">200,800</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Excel_SaveResults workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Excel_SaveResults.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="sd:DataTable" x:Key="_booksDT">
+                        <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="booksTableDt" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="_outputFile">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="outputFile" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="_outputFilePath">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="outputFilePath" />
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                </FlowStep>
+              </FlowStep.Next>
             </FlowStep>
           </FlowStep.Next>
         </FlowStep>
@@ -170,9 +209,9 @@
     <FlowStep x:Name="__ReferenceID1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,256</av:Point>
+          <av:Point x:Key="ShapeLocation">200,386</av:Point>
           <av:Size x:Key="ShapeSize">200,68</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,324 300,354</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,454 300,484</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName="Var Init" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -195,6 +234,14 @@
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="x:String">[parameters("outputFile").ToString.Replace("date", DateTime.Now.ToString("ddmmyyyy")).Replace("time", DateTime.Now.ToString("hhmmss"))]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[outputFilePath]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[currentDirectory+ path.DirectorySeparatorChar + parameters("outputFilePath").ToString]</InArgument>
           </Assign.Value>
         </Assign>
         <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
@@ -229,17 +276,25 @@
             <InArgument x:TypeArguments="x:String">[parameters("categoryB").ToString]</InArgument>
           </Assign.Value>
         </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[maxBooksLimit]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[Integer.Parse(parameters("maxBooksLimit").ToString)]</InArgument>
+          </Assign.Value>
+        </Assign>
       </Sequence>
       <FlowStep.Next>
         <x:Reference>__ReferenceID0</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID6">
+    <FlowStep x:Name="__ReferenceID8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,94</av:Point>
           <av:Size x:Key="ShapeSize">200,52</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,146 300,174</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,146 300,192</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[wfName+&quot; started&quot;]">
@@ -250,22 +305,38 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID2">
+        <FlowStep x:Name="__ReferenceID7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">200,174</av:Point>
+              <av:Point x:Key="ShapeLocation">200,192</av:Point>
               <av:Size x:Key="ShapeSize">200,52</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,226 300,256</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">300,244 300,324</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke configInit workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Config_Init.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="njl:JObject" x:Key="_parameters">[parameters]</OutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="_configFilePath">[configFilePath]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
+          <ui:GetEnvironmentVariable DisplayName="Get Environment Variable" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_2" Variable="CurrentDirectory" VariableValue="[currentDirectory]" />
           <FlowStep.Next>
-            <x:Reference>__ReferenceID1</x:Reference>
+            <FlowStep x:Name="__ReferenceID2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">200,324</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,376 300,386</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke configInit workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Config_Init.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <OutArgument x:TypeArguments="njl:JObject" x:Key="_parameters">
+                    <mva:VisualBasicReference x:TypeArguments="njl:JObject" ExpressionText="parameters" />
+                  </OutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="_configFilePath">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="currentDirectory+Path.DirectorySeparatorChar+configFilePath" />
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <FlowStep.Next>
+                <x:Reference>__ReferenceID1</x:Reference>
+              </FlowStep.Next>
+            </FlowStep>
           </FlowStep.Next>
         </FlowStep>
       </FlowStep.Next>
@@ -307,5 +378,7 @@
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
   </Flowchart>
 </Activity>
