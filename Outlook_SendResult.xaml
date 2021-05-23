@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>624,801</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>714,1402.5</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Outlook_SendResult_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -75,7 +75,6 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Outlook_SendResult" sap:VirtualizedContainerService.HintSize="724,1237.5" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -105,10 +104,10 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,127.5</av:Point>
           <av:Size x:Key="ShapeSize">200,52</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,179.5 299.895,179.5 299.895,199.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,179.5 300,229.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[wfName+&quot; start&quot;]">
+      <ui:LogMessage DisplayName="Log Message WF start" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[wfName+&quot; start&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -119,9 +118,9 @@
         <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">168.895,199.5</av:Point>
+              <av:Point x:Key="ShapeLocation">169,229.5</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">299.895,259.5 299.895,309.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">300,289.5 300,339.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -141,9 +140,9 @@
             <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">199.895,309.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">200,339.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,52</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">299.895,361.5 299.895,411.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">300,391.5 300,441.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Attachment &quot;+attachmentPath]">
@@ -157,16 +156,14 @@
                 <FlowStep x:Name="__ReferenceID1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">199.895,411.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">200,441.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,52</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[_body]" DisplayName="Send SMTP Mail Message" Email="julio.barbagallo.dev@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="Un4nu3v4c0n7r4s3n14!" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[_subject]" To="[_mailTo]">
+                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[_body]" DisplayName="Send SMTP Mail Message" Email="user.account@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="useraccountpassword" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[_subject]" To="[_mailTo]">
                     <ui:SendMail.Files>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                        <InArgument x:TypeArguments="x:String">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="attachmentPath" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String">[attachmentPath]</InArgument>
                       </scg:List>
                     </ui:SendMail.Files>
                     <sap:WorkflowViewStateService.ViewState>
