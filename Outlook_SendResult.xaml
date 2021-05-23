@@ -160,7 +160,7 @@
                       <av:Size x:Key="ShapeSize">200,52</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[_body]" DisplayName="Send SMTP Mail Message" Email="user.account@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="useraccountpassword" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[_subject]" To="[_mailTo]">
+                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[_body]" DisplayName="Send SMTP Mail Message" Email="user.account@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="useraccountpassword" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[_subject]" To="[_mailTo]">
                     <ui:SendMail.Files>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                         <InArgument x:TypeArguments="x:String">[attachmentPath]</InArgument>
