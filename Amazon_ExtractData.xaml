@@ -177,7 +177,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,384 300,414 299.895,414 299.895,434</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="879,1774" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="879,3217" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                   <Variable x:TypeArguments="x:Int32" Name="lineCounter" />
@@ -187,13 +187,13 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Amazoncom Page'" sap:VirtualizedContainerService.HintSize="837,1682" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="cf0a4810c59259535337e02f9c1d7fc1" Selector="&lt;html app='chrome.exe' title='Amazon.com : Robotics and Automation' /&gt;">
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Amazoncom Page'" sap:VirtualizedContainerService.HintSize="837,3125" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="cf0a4810c59259535337e02f9c1d7fc1" Selector="&lt;html app='chrome.exe' title='Amazon.com : Robotics and Automation' /&gt;">
                   <ui:BrowserScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="803,1536" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="803,2979" sap2010:WorkflowViewState.IdRef="Sequence_2">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="textDT" />
                           <Variable x:TypeArguments="x:String" Name="cantItem" />
@@ -238,13 +238,13 @@
                             <InArgument x:TypeArguments="x:Int32">1</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="761,1252" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(1, _maxBooksLimit)]">
+                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="761,2695" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(1, _maxBooksLimit)]">
                           <ui:ForEach.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="725,1118" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="725,2561" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="title" />
                                   <Variable x:TypeArguments="x:String" Name="url" />
@@ -285,16 +285,16 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:CommentOut>
-                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="683,329" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="683,1772" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="376,1540" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get title" sap:VirtualizedContainerService.HintSize="262,52" sap2010:WorkflowViewState.IdRef="GetFullText_2">
+                                      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get title" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="GetFullText_2">
                                         <ui:GetFullText.Target>
                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d76a6da-3503-40e5-a5ef-9712341114aa" InformativeScreenshot="f5a789448615e59fcd7c7b4d48d5085f" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='Amazon.com*' /&gt;&lt;webctrl tag='H2' idx='{0}' /&gt;&quot;, lineCounter)]">
                                             <ui:Target.TimeoutMS>
@@ -315,35 +315,100 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:GetFullText>
-                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="262,52" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                      <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="href" DisplayName="Get url" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                                        <ui:GetAttribute.Result>
+                                          <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+                                        </ui:GetAttribute.Result>
+                                        <ui:GetAttribute.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3ae3f26-80cc-412e-9c60-fadebf742094" InformativeScreenshot="f5a789448615e59fcd7c7b4d48d5085f" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='Amazon.com*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='search' tag='DIV' idx='{0}' /&gt;&lt;webctrl parentid='search' tag='A' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' idx='1' /&gt;&quot;, lineCounter)]">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetAttribute.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:GetAttribute>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                                         <ui:CommentOut.Body>
-                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,160" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="url" DisplayName="Get url" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
-                                              <ui:GetAttribute.Result>
-                                                <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
-                                              </ui:GetAttribute.Result>
-                                              <ui:GetAttribute.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3ae3f26-80cc-412e-9c60-fadebf742094" InformativeScreenshot="f5a789448615e59fcd7c7b4d48d5085f" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='Amazon.com*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='search' tag='DIV' idx='{0}' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span&amp;gt;span' parentid='search' tag='SPAN' idx='1' /&gt;&quot;, lineCounter)]">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetAttribute.Target>
+                                            <Sequence DisplayName="Sequence get url" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                            </ui:GetAttribute>
+                                              <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Right Click" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="Alt" MouseButton="BTN_RIGHT">
+                                                <ui:Click.CursorPosition>
+                                                  <ui:CursorPosition Position="Center">
+                                                    <ui:CursorPosition.OffsetX>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetX>
+                                                    <ui:CursorPosition.OffsetY>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetY>
+                                                  </ui:CursorPosition>
+                                                </ui:Click.CursorPosition>
+                                                <ui:Click.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a35dc340-1c67-45ef-907e-9bb63cf7fcff" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='Amazon.com*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='search' tag='DIV' idx='{0}' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span&amp;gt;span' parentid='search' tag='SPAN' idx='1' /&gt;&quot;, lineCounter)]">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:Click.Target>
+                                              </ui:Click>
+                                              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey copy link address" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="e" KeyModifiers="None">
+                                                <ui:SendHotkey.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2b73d5ee-08f3-4d07-bcd5-1991cb6bf423">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:SendHotkey.Target>
+                                              </ui:SendHotkey>
+                                              <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetFromClipboard_1">
+                                                <ui:GetFromClipboard.Result>
+                                                  <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+                                                </ui:GetFromClipboard.Result>
+                                              </ui:GetFromClipboard>
+                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                                <ui:CommentOut.Body>
+                                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,185" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Getting url: &quot;+url]" />
+                                                  </Sequence>
+                                                </ui:CommentOut.Body>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:CommentOut>
+                                            </Sequence>
                                           </Sequence>
                                         </ui:CommentOut.Body>
                                         <sap:WorkflowViewStateService.ViewState>
@@ -353,72 +418,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:CommentOut>
-                                      <Sequence DisplayName="Sequence get url" sap:VirtualizedContainerService.HintSize="262,68" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Right Click" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="Alt" MouseButton="BTN_RIGHT">
-                                          <ui:Click.CursorPosition>
-                                            <ui:CursorPosition Position="Center">
-                                              <ui:CursorPosition.OffsetX>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetX>
-                                              <ui:CursorPosition.OffsetY>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetY>
-                                            </ui:CursorPosition>
-                                          </ui:Click.CursorPosition>
-                                          <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a35dc340-1c67-45ef-907e-9bb63cf7fcff" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='Amazon.com*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='search' tag='DIV' idx='{0}' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span&amp;gt;span' parentid='search' tag='SPAN' idx='1' /&gt;&quot;, lineCounter)]">
-                                              <ui:Target.TimeoutMS>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:Target.TimeoutMS>
-                                              <ui:Target.WaitForReady>
-                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                              </ui:Target.WaitForReady>
-                                            </ui:Target>
-                                          </ui:Click.Target>
-                                        </ui:Click>
-                                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey copy link address" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="e" KeyModifiers="None">
-                                          <ui:SendHotkey.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2b73d5ee-08f3-4d07-bcd5-1991cb6bf423">
-                                              <ui:Target.TimeoutMS>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:Target.TimeoutMS>
-                                              <ui:Target.WaitForReady>
-                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                              </ui:Target.WaitForReady>
-                                            </ui:Target>
-                                          </ui:SendHotkey.Target>
-                                        </ui:SendHotkey>
-                                        <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetFromClipboard_1">
-                                          <ui:GetFromClipboard.Result>
-                                            <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
-                                          </ui:GetFromClipboard.Result>
-                                        </ui:GetFromClipboard>
-                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-                                          <ui:CommentOut.Body>
-                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,185" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Getting url: &quot;+url]" />
-                                            </Sequence>
-                                          </ui:CommentOut.Body>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:CommentOut>
-                                      </Sequence>
-                                      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get author" sap:VirtualizedContainerService.HintSize="262,52" sap2010:WorkflowViewState.IdRef="GetFullText_3">
+                                      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get author" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="GetFullText_3">
                                         <ui:GetFullText.Target>
                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="80b94b15-82d5-430e-95aa-66a89d31b7a9" InformativeScreenshot="070cd2bf52eb6c3dd82f2a18441bd087" Selector="[String.Format(&quot;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='search' tag='DIV' idx='{0}' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search' tag='DIV' /&gt;&quot;, lineCounter)]">
                                             <ui:Target.TimeoutMS>
@@ -439,7 +439,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:GetFullText>
-                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[author]</OutArgument>
                                         </Assign.To>
@@ -447,7 +447,7 @@
                                           <InArgument x:TypeArguments="x:String">[system.Text.RegularExpressions.Regex.Match(rawAuthor, "by [^|]*").ToString.Substring(3)]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get price" sap:VirtualizedContainerService.HintSize="262,52" sap2010:WorkflowViewState.IdRef="GetFullText_4">
+                                      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get price" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="GetFullText_4">
                                         <ui:GetFullText.Target>
                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="388bd04b-a428-4fa0-8c13-0e7ac0d3b0ae" InformativeScreenshot="7374bf664101757df94e5bb21fa1f818" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='Amazon.com*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='search' tag='DIV' idx='{0}' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span&amp;gt;span' parentid='search' tag='SPAN' idx='1' /&gt;&quot;, lineCounter)]">
                                             <ui:Target.TimeoutMS>
@@ -468,7 +468,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:GetFullText>
-                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="262,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                                         <ui:CommentOut.Body>
                                           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,144" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -493,7 +493,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:CommentOut>
-                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:Int32">[nextLine]</OutArgument>
                                         </Assign.To>
@@ -501,7 +501,7 @@
                                           <InArgument x:TypeArguments="x:Int32">[lineCounter + 1]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
                                         </Assign.To>
@@ -509,10 +509,10 @@
                                           <InArgument x:TypeArguments="sd:DataRow">[scrapedDT.NewRow]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="262,68" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="334,452" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
@@ -529,7 +529,7 @@
                                             <OutArgument x:TypeArguments="x:Object">[newRow("url")]</OutArgument>
                                           </Assign.To>
                                           <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Object">[url]</InArgument>
+                                            <InArgument x:TypeArguments="x:Object">["amazon.com"+url]</InArgument>
                                           </Assign.Value>
                                         </Assign>
                                         <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
@@ -549,14 +549,14 @@
                                           </Assign.Value>
                                         </Assign>
                                       </Sequence>
-                                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[scrapedDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[scrapedDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                                     </Sequence>
                                   </TryCatch.Try>
                                   <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,163" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>

@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>625,801</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>624,801</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Excel_SaveResults_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -70,18 +70,13 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Excel_SaveResults" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Name="wfName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Excel_SaveResults</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Excel_SaveResults" Name="wfName" />
       <Variable x:TypeArguments="x:String" Name="booksDTTXT" />
       <Variable x:TypeArguments="scg:List(sd:DataRow)" Default="[New List(Of DataRow)]" Name="forDeletionList" />
     </Flowchart.Variables>
@@ -120,28 +115,27 @@
               <av:PointCollection x:Key="ConnectorLocation">300,281.5 300,331.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[_booksDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[_booksDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,507" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,488" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,386" sap2010:WorkflowViewState.IdRef="Sequence_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[Decimal.Parse(CurrentRow(&quot;price&quot;).ToString) &lt;= 0]" sap:VirtualizedContainerService.HintSize="484,396" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[Decimal.Parse(CurrentRow(&quot;price&quot;).ToString) &lt;= 0]" sap:VirtualizedContainerService.HintSize="484,294" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="272.5,216" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230.5,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Para borrar: &quot;+CurrentRow(&quot;title&quot;).ToString]" />
-                        <AddToCollection x:TypeArguments="sd:DataRow" Collection="[forDeletionList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="230.5,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[CurrentRow]" />
+                        <AddToCollection x:TypeArguments="sd:DataRow" Collection="[forDeletionList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[CurrentRow]" />
                       </Sequence>
                     </If.Then>
                   </If>
@@ -188,7 +182,7 @@
                       <av:Size x:Key="ShapeSize">200,52</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[_outputFilePath+Path.DirectorySeparatorChar+_outputFile]">
+                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[_outputFilePath+Path.DirectorySeparatorChar+_outputFile]">
                     <ui:ExcelApplicationScope.Body>
                       <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                         <ActivityAction.Argument>
